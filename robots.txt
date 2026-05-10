@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://guide1xbet-afrique.netlify.app/sitemap.xml
