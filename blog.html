@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Conseils et astuces 1xBet : paris sportifs, bonus et stratégies débutants</title>
+    <meta name="description" content="Découvrez des guides simples sur 1xBet : comprendre les cotes, éviter les erreurs, utiliser les bonus et améliorer vos paris sportifs.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Guide<span>1xBet</span></a>
+            <ul class="nav-links">
+                <li><a href="guide-1xbet-mb25t.html">Guide VIP</a></li>
+                <li><a href="comment-creer-compte.html">Inscription</a></li>
+                <li><a href="depot-retrait-mobile-money.html">Dépôts/Retraits</a></li>
+                <li><a href="blog.html" style="color: #1a56db;">Blog</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h1>Conseils et guides pour réussir sur 1xBet</h1>
+        
+        <p>Parcourir notre blog est un excellent moyen de s'informer avant de commencer. Nos articles vous aident à comprendre la mécanique de la plateforme et les meilleures pratiques. N'oubliez pas qu'avant de commencer, il vous faut un profil optimisé. <strong>Utiliser le code promo MB25T</strong> à l'inscription est l'un de ces leviers d'optimisation (voir notre <a href="guide-1xbet-mb25t.html">guide principal</a>).</p>
+
+        <div id="odds-chart" style="width: 100%; height: 420px; background-color: #111827; padding: 1.5rem; border-radius: 12px; margin: 2rem 0;">
+            <h3 style="text-align: center; color: #f9fafb; margin-bottom: 1rem;">Évolution des Cotes : Équipe A vs Équipe B</h3>
+            <div id="oddsChartCanvas" style="height: 300px;"></div>
+        </div>
+
+        <div class="search-container" style="margin-bottom: 2rem;">
+            <input type="text" id="searchInput" placeholder="Rechercher un article (ex: cotes, bonus, erreurs)..." style="width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid #d1d5db; font-size: 1.05rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onkeyup="filterArticles()">
+        </div>
+
+        <div class="grid-cards" id="articlesGrid">
+            <!-- Article 1 -->
+            <article class="card">
+                <h3>Comprendre le système de Cotes</h3>
+                <p>Les cotes vous indiquent la probabilité d'un évènement ainsi que votre gain potentiel. Une cote de 2.0 signifie que vous doublez votre mise en cas de succès...</p>
+                <p><em>Avant de faire un pronostic, assurez-vous de bien comprendre <a href="comment-creer-compte.html">comment créer un compte</a> correctement.</em></p>
+                <span style="font-size: 0.9em; color: #6b7280;">Publié il y a 2 jours</span>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="card">
+                <h3>Paris Simples vs Paris Combinés</h3>
+                <p>Un dilemme courant pour le débutant. Le pari simple est plus sûr car il ne dépend que d'un résultat. Le pari combiné peut rapporter gros mais est très risqué.</p>
+                <p><em>Veillez à approvisionner prudemment votre solde via <a href="depot-retrait-mobile-money.html">dépôt Mobile Money</a> avant de tester vos stratégies.</em></p>
+                <span style="font-size: 0.9em; color: #6b7280;">Publié il y a 5 jours</span>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="card">
+                <h3>Les Erreurs à Éviter (Débutants)</h3>
+                <p>Parier sans s'informer, essayer de se refaire immédiatement après une perte, ou encore ignorer les conditions de mise : voici les erreurs classiques à éviter absolument !</p>
+                <p><em>Règle numéro 1 : lisez toujours la <a href="faq-1xbet.html">Foire Aux Questions</a> si vous doutez de la procédure.</em></p>
+                <span style="font-size: 0.9em; color: #6b7280;">Publié la semaine dernière</span>
+            </article>
+
+            <!-- Article 4 -->
+            <article class="card">
+                <h3>Comment maximiser son Bonus 1xBet ?</h3>
+                <p>Avoir un bonus c'est bien, savoir l'utiliser c'est mieux. Il y a des conditions de remises en jeu spécifiques à valider avant de pouvoir encaisser un bonus en cash.</p>
+                <p><em>Rappel important : Pensez à <strong>utiliser le code MB25T</strong> à l'entrée. Plus de détails sur notre <a href="guide-1xbet-mb25t.html">aide associée au code</a>.</em></p>
+                <span style="font-size: 0.9em; color: #6b7280;">Publié y a deux semaines</span>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Guide Éducatif. Ce site est informatif et non affilié officiellement.</p>
+        <div class="footer-links">
+            <a href="index.html">Accueil</a>
+            <a href="contact.html">Contact</a>
+            <a href="faq-1xbet.html">FAQ</a>
+        </div>
+    </footer>
+    <script>
+        function filterArticles() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const cards = document.querySelectorAll('#articlesGrid .card');
+
+            cards.forEach(card => {
+                const title = card.querySelector('h3').innerText.toLowerCase();
+                const content = card.querySelector('p').innerText.toLowerCase();
+                
+                if (title.includes(filter) || content.includes(filter)) {
+                    card.style.display = "";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="src/chart.js"></script>
+</body>
+</html>
