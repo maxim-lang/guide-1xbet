@@ -64,7 +64,13 @@ function renderChart(canvasElement) {
             plugins: {
                 legend: {
                     position: 'bottom',
-                    labels: { color: '#d1d5db', padding: 20, font: { size: 14 } }
+                    labels: { 
+                        color: '#d1d5db', 
+                        padding: 20, 
+                        font: { 
+                            size: window.innerWidth < 600 ? 12 : 14 
+                        } 
+                    }
                 },
                 tooltip: {
                     backgroundColor: '#1f2937',
