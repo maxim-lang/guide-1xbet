@@ -66,9 +66,10 @@ function renderChart(canvasElement) {
                     position: 'bottom',
                     labels: { 
                         color: '#d1d5db', 
-                        padding: 20, 
+                        padding: window.innerWidth < 600 ? 10 : 20, 
+                        boxWidth: window.innerWidth < 600 ? 15 : 40,
                         font: { 
-                            size: window.innerWidth < 600 ? 12 : 14 
+                            size: window.innerWidth < 600 ? 11 : 14 
                         } 
                     }
                 },
