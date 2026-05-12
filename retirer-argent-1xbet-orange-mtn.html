@@ -3,87 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Sécurité et Performance -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://reffpa.com; connect-src 'self';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    
-    <!-- SEO : Optimisé pour "Retrait 1xBet Orange Money MTN" -->
     <title>Retrait 1xBet : Comment retirer son argent via Orange Money et MTN (2026)</title>
-    <meta name="description" content="Guide complet 2026 pour retirer vos gains 1xBet en Afrique avec Orange Money et MTN Mobile Money. Délais, astuces et solutions aux problèmes de retrait.">
+    <meta name="description" content="Guide complet 2026 pour retirer vos gains 1xBet en Afrique avec Orange Money et MTN Mobile Money.">
     
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">Guide<span>1xBet</span></a>
-            <ul class="nav-links">
-                <li><a href="guide-1xbet-mb25t.html">Guide VIP</a></li>
-                <li><a href="comment-creer-compte.html">Inscription</a></li>
-                <li><a href="depot-retrait-mobile-money.html">Dépôts/Retraits</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
+<body class="bg-surface text-on-surface font-body-md antialiased flex flex-col min-h-screen">
+
+<header class="glass sticky top-0 z-50 border-b border-outline">
+    <div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter h-20 max-w-container-max mx-auto">
+        <div class="flex items-center gap-10">
+            <a class="font-headline-md text-3xl font-black text-gradient-primary tracking-tighter" href="index.html">Guide<span class="text-secondary">1xBet</span></a>
+            <nav class="hidden lg:flex items-center gap-8">
+                <a class="nav-link" href="index.html">Accueil</a>
+                <a class="nav-link" href="guide-1xbet-mb25t.html">Guide VIP</a>
+                <a class="nav-link" href="comment-creer-compte.html">Inscription</a>
+                <a class="nav-link active" href="depot-retrait-mobile-money.html">Transactions</a>
+                <a class="nav-link" href="faq-1xbet.html">FAQ</a>
+                <a class="nav-link" href="blog.html">Blog</a>
+            </nav>
         </div>
-    </header>
-
-    <main>
-        <h1>Comment retirer son argent 1xBet avec Orange Money et MTN ?</h1>
-        
-        <p>Gagner un pari est une sensation formidable, mais savoir comment récupérer son argent rapidement l'est encore plus. En Afrique, les solutions Mobile Money comme Orange Money et MTN sont les moyens les plus populaires et les plus fiables pour retirer ses gains 1xBet en quelques minutes.</p>
-
-        <h2>Les conditions préalables au retrait</h2>
-        <p>Avant de lancer votre demande de retrait, assurez-vous de respecter ces quelques règles pour éviter tout blocage :</p>
-        <ul>
-            <li><strong>Même méthode :</strong> Vous devez retirer par le même moyen que celui utilisé pour votre dernier dépôt.</li>
-            <li><strong>Profil complété :</strong> Votre profil doit être rempli à 100% dans les paramètres du compte (nom, prénom, numéro de téléphone vérifié).</li>
-            <li><strong>Bonus validé :</strong> Si vous avez un bonus en cours, assurez-vous d'avoir rempli les conditions de mise avant de retirer votre solde principal.</li>
-        </ul>
-        
-        <div class="promo-box">
-            <h3>Rappel de sécurité</h3>
-            <p>N'utilisez jamais le numéro de téléphone d'un ami pour retirer vos gains. Le compte Mobile Money doit être à votre nom pour garantir la sécurité de la transaction.</p>
+        <div class="flex items-center gap-4">
+            <button class="btn-premium btn-primary">S'inscrire</button>
         </div>
+    </div>
+    <div id="progress-bar" class="h-1 bg-gradient-to-r from-primary to-secondary w-0 transition-all duration-150"></div>
+</header>
 
-        <h2>Étapes pour retirer via Orange Money ou MTN</h2>
-        <p>La procédure est identique pour les deux opérateurs :</p>
-        <ol>
-            <li>Connectez-vous à votre application ou site 1xBet.</li>
-            <li>Allez dans <strong>"Mon compte"</strong> puis cliquez sur <strong>"Retirer des fonds"</strong>.</li>
-            <li>Sélectionnez le logo <strong>Orange Money</strong> ou <strong>MTN</strong> selon votre choix.</li>
-            <li>Entrez le montant que vous souhaitez retirer (minimum généralement autour de 600 FCFA).</li>
-            <li>Confirmez le numéro de téléphone et validez.</li>
-            <li>Vous recevrez un SMS de confirmation de l'opérateur une fois les fonds reçus.</li>
-        </ol>
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-padding-mobile md:py-section-padding-desktop">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+        <article class="lg:col-span-8 premium-card p-8 md:p-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-3xl rounded-full -mr-32 -mt-32"></div>
+            <h1 class="text-gradient font-headline-lg mb-8">Comment retirer avec Orange & MTN ?</h1>
+            
+            <div class="prose prose-invert max-w-none text-on-surface-variant">
+                <p class="text-lg leading-relaxed mb-8">Gagner un pari est une sensation formidable. En Afrique, les solutions Mobile Money comme Orange Money et MTN sont les moyens les plus fiables pour retirer ses gains en quelques minutes.</p>
 
-        <h2>Pourquoi mon retrait prend-il du temps ?</h2>
-        <p>En général, les retraits Mobile Money sont traités en 15 minutes. Si cela prend plus de temps :</p>
-        <ul>
-            <li>Le réseau de l'opérateur mobile peut être saturé.</li>
-            <li>1xBet peut effectuer une vérification de sécurité supplémentaire sur votre pari.</li>
-            <li>Si après 24h vous n'avez rien reçu, contactez le support client via le chat en direct dans l'application.</li>
-        </ul>
+                <div class="bg-gradient-to-r from-primary/20 to-primary-dark/20 p-8 rounded-3xl mb-12 border border-primary/30 relative overflow-hidden">
+                    <h3 class="text-white font-headline-sm mb-4">Conditions de retrait</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary">check_circle</span>
+                            <span>Même méthode que le dépôt</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary">check_circle</span>
+                            <span>Profil complété à 100%</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary">check_circle</span>
+                            <span>Bonus validé ou annulé</span>
+                        </li>
+                    </ul>
+                </div>
 
-        <h2>Astuce pour les nouveaux joueurs</h2>
-        <p>Si vous n'avez pas encore de compte, utilisez le code promo <strong>MB25T</strong> lors de votre inscription. Cela vous permet d'avoir un compte "Premium" mieux vu par le système de sécurité lors des premiers retraits.</p>
-        
-        <div style="margin-top: 2rem;">
-            <a href="comment-creer-compte.html" class="btn-cta" style="display: inline-block; padding: 0.8rem 1.5rem; background-color: #1a56db; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">S'inscrire avec le code MB25T</a>
+                <h2 class="text-primary font-headline-md mt-12 mb-6">Étapes du retrait</h2>
+                <ol class="space-y-6 mb-12">
+                    <li class="premium-card p-6 border-outline/50">
+                        <strong class="text-white block mb-2">1. Accès au profil</strong>
+                        Allez dans "Mon compte" puis cliquez sur "Retirer des fonds".
+                    </li>
+                    <li class="premium-card p-6 border-outline/50">
+                        <strong class="text-white block mb-2">2. Sélection Opérateur</strong>
+                        Choisissez Orange Money ou MTN Mobile Money.
+                    </li>
+                    <li class="premium-card p-6 border-outline/50">
+                        <strong class="text-white block mb-2">3. Validation</strong>
+                        Entrez le montant et validez. Les fonds arrivent en 15 minutes en moyenne.
+                    </li>
+                </ol>
+
+                <div class="mt-12 text-center">
+                    <a href="comment-creer-compte.html" class="btn-premium btn-primary inline-flex items-center gap-2">
+                        Utiliser le code MB25T
+                        <span class="material-symbols-outlined">trending_up</span>
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <aside class="lg:col-span-4 space-y-8">
+            <div class="premium-card border-secondary/20 p-6">
+                <h3 class="font-headline-sm text-primary mb-4 flex items-center gap-2"><span class="material-symbols-outlined">shield</span> Sécurité</h3>
+                <p class="text-sm text-on-surface-variant">N'utilisez jamais le numéro d'un tiers. Le compte doit être à votre nom.</p>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer class="bg-surface-container-highest w-full py-12 border-t border-outline mt-auto">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-center md:text-left">
+            <span class="font-headline-sm text-primary font-black block mb-2">Guide1xBet</span>
+            <p class="text-xs text-on-surface-variant opacity-60">© 2026 Guide Éducatif.</p>
         </div>
+        <nav class="flex gap-6 text-xs font-bold uppercase tracking-widest">
+            <a href="index.html" class="hover:text-secondary transition-colors">Accueil</a>
+            <a href="blog.html" class="hover:text-secondary transition-colors">Blog</a>
+            <a href="contact.html" class="hover:text-secondary transition-colors">Contact</a>
+        </nav>
+    </div>
+</footer>
 
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Guide Éducatif. Ce site est informatif et non affilié officiellement.</p>
-        <div class="footer-links">
-            <a href="index.html">Accueil</a>
-            <a href="blog.html">Notre Blog</a>
-            <a href="depot-retrait-mobile-money.html">Dépôts & Retraits</a>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="chart.js"></script>
+<script>
+    window.onscroll = function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById("progress-bar").style.width = scrolled + "%";
+    };
+</script>
 </body>
 </html>
