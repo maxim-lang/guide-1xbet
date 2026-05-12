@@ -3,66 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://reffpa.com; connect-src 'self';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>FAQ 1xBet : Bonus, retrait, inscription et problèmes courants expliqués</title>
     <meta name="description" content="Toutes les réponses aux questions fréquentes sur 1xBet : bonus, inscription, retrait, dépôt Mobile Money et code promo MB25T.">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#0047FF",
+                      "primary-dark": "#0037C7",
+                      "secondary": "#00E676",
+                      "secondary-dark": "#00C853",
+                      "background": "#F8FAFC",
+                      "surface": "#FFFFFF",
+                      "surface-variant": "#F1F5F9",
+                      "on-surface": "#0F172A",
+                      "on-surface-variant": "#475569",
+                      "outline": "#E2E8F0",
+                      "outline-variant": "#CBD5E1",
+                      "error": "#EF4444"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.5rem",
+                      "lg": "0.75rem",
+                      "xl": "1rem",
+                      "2xl": "1.5rem",
+                      "3xl": "2rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-padding-mobile": "48px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "container-max": "1140px",
+                      "section-padding-desktop": "80px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Manrope"],
+                      "body-lg": ["Inter"],
+                      "headline-sm": ["Manrope"],
+                      "body-md": ["Inter"],
+                      "headline-md": ["Manrope"],
+                      "headline-lg": ["Manrope"],
+                      "label-caps": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-lg": ["18px", {"lineHeight": "32px", "fontWeight": "400"}],
+                      "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                      "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "800"}],
+                      "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">Guide<span>1xBet</span></a>
-            <ul class="nav-links">
-                <li><a href="guide-1xbet-mb25t.html">Guide VIP</a></li>
-                <li><a href="comment-creer-compte.html">Inscription</a></li>
-                <li><a href="depot-retrait-mobile-money.html">Dépôts/Retraits</a></li>
-                <li><a href="faq-1xbet.html">FAQ</a></li>
-            </ul>
-        </div>
-    </header>
+<body class="bg-surface text-on-surface font-body-md antialiased flex flex-col min-h-screen">
 
-    <main>
-        <h1>FAQ complète sur 1xBet pour débutants</h1>
+<header class="glass sticky top-0 z-50 border-b border-outline">
+    <div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter h-20 max-w-container-max mx-auto">
+        <div class="flex items-center gap-10">
+            <a class="font-headline-md text-3xl font-black text-gradient-primary tracking-tighter" href="index.html">Guide<span class="text-secondary">1xBet</span></a>
+            <nav class="hidden lg:flex items-center gap-8">
+                <a class="nav-link" href="index.html">Accueil</a>
+                <a class="nav-link" href="guide-1xbet-mb25t.html">Guide VIP</a>
+                <a class="nav-link" href="comment-creer-compte.html">Inscription</a>
+                <a class="nav-link" href="depot-retrait-mobile-money.html">Transactions</a>
+                <a class="nav-link text-white active" href="faq-1xbet.html">FAQ</a>
+                <a class="nav-link" href="blog.html">Blog</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="btn-premium btn-primary">S'inscrire</button>
+        </div>
+    </div>
+    <div id="progress-bar" class="h-1 bg-gradient-to-r from-primary to-secondary w-0 transition-all duration-150"></div>
+</header>
+
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-padding-mobile md:py-section-padding-desktop">
+    
+    <div class="mb-12 relative">
+        <div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/10 blur-3xl rounded-full"></div>
+        <h1 class="text-gradient font-headline-lg mb-6">Questions Fréquentes (FAQ)</h1>
+        <p class="text-lg text-on-surface-variant">En tant que débutant, vous pouvez rencontrer certaines difficultés. Voici les réponses aux questions les plus fréquemment posées par notre communauté.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
         
-        <p>En tant que débutant, vous pouvez rencontrer certaines difficultés. Voici les réponses aux questions les plus fréquemment posées par notre communauté.</p>
+        <!-- FAQ List (8 cols) -->
+        <div class="lg:col-span-8 space-y-6">
+            
+            <div class="premium-card group">
+                <h3 class="font-headline-sm text-white mb-4 flex items-start gap-4">
+                    <span class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center text-primary text-sm font-black shrink-0">01</span>
+                    Pourquoi mon bonus n'apparaît pas ?
+                </h3>
+                <p class="text-on-surface-variant leading-relaxed">Avez-vous pensé à <strong>utiliser le code promo MB25T</strong> lors de votre inscription ? Assurez-vous également d'avoir complété votre profil. Plus d'infos dans le <a href="guide-1xbet-mb25t.html" class="text-secondary font-bold hover:underline">guide du bonus</a>.</p>
+            </div>
 
-        <div class="card" style="margin-bottom: 1.5rem;">
-            <h3>1. Pourquoi mon bonus de bienvenue n'apparaît-il pas ?</h3>
-            <p>Plusieurs raisons peuvent expliquer cela. Avez-vous pensé à <strong>utiliser le code promo MB25T</strong> lors de votre inscription ? Avez-vous rempli toutes les données de votre profil personnel ? Si oui, le bonus s'active généralement lors de votre premier versement. Assurez-vous de vérifier ces étapes dans le <a href="guide-1xbet-mb25t.html">guide officiel du code</a>.</p>
+            <div class="premium-card group">
+                <h3 class="font-headline-sm text-white mb-4 flex items-start gap-4">
+                    <span class="w-8 h-8 bg-secondary/20 rounded-lg flex items-center justify-center text-secondary text-sm font-black shrink-0">02</span>
+                    Problème lors de l'inscription !
+                </h3>
+                <p class="text-on-surface-variant leading-relaxed">Si votre numéro est déjà utilisé, vous avez probablement déjà un compte. La politique est stricte : un seul compte par personne. Revoyez notre <a href="comment-creer-compte.html" class="text-secondary font-bold hover:underline">tutoriel d'inscription</a>.</p>
+            </div>
+
+            <div class="premium-card group">
+                <h3 class="font-headline-sm text-white mb-4 flex items-start gap-4">
+                    <span class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center text-primary text-sm font-black shrink-0">03</span>
+                    Retrait Mobile Money retardé ?
+                </h3>
+                <p class="text-on-surface-variant leading-relaxed">Assurez-vous d'utiliser la même méthode que votre <a href="depot-retrait-mobile-money.html" class="text-secondary font-bold hover:underline">dépôt</a>. Si le délai dépasse 24 heures, contactez le support via le Live Chat.</p>
+            </div>
+
+            <div class="premium-card bg-primary/10 border-primary/20 p-8 text-center">
+                <h3 class="font-headline-sm text-white mb-4">Toujours besoin d'aide ?</h3>
+                <p class="text-on-surface-variant mb-8">Nos experts vous répondent en direct sur WhatsApp ou via notre formulaire.</p>
+                <a href="contact.html" class="btn-premium btn-primary">Nous contacter</a>
+            </div>
         </div>
 
-        <div class="card" style="margin-bottom: 1.5rem;">
-            <h3>2. J'ai un problème lors de l'inscription !</h3>
-            <p>Si vous recevez un message d'erreur indiquant que votre numéro est déjà utilisé, c'est que vous avez probablement déjà un compte. La politique de l'opérateur est stricte : un seul compte par personne. Si vous bloquez à d'autres étapes, revoyez notre tutoriel sur <a href="comment-creer-compte.html">comment créer un compte</a> étape par étape.</p>
-        </div>
+        <!-- Sidebar (4 cols) -->
+        <aside class="lg:col-span-4 space-y-8">
+            <!-- Promo Card -->
+            <div class="bg-surface-container border-2 border-dashed border-secondary rounded-xl p-6 text-center">
+                <h3 class="font-headline-sm text-primary mb-2">Code MB25T</h3>
+                <p class="text-sm text-on-surface-variant mb-4">Le code officiel pour activer vos bonus de bienvenue.</p>
+                <div class="bg-primary text-white font-bold text-2xl py-3 rounded-lg mb-4 tracking-widest">MB25T</div>
+                <a href="guide-1xbet-mb25t.html" class="text-secondary font-label-caps hover:underline font-bold">Voir le guide d'utilisation →</a>
+            </div>
 
-        <div class="card" style="margin-bottom: 1.5rem;">
-            <h3>3. Mon retrait Mobile Money est retardé, que faire ?</h3>
-            <p>Généralement, une demande de retrait est traitée rapidement. Cependant, les opérateurs réseaux (MTN, Orange Mobile, etc.) peuvent parfois subir des perturbations locales. Assurez-vous d'avoir demandé un retrait via la même méthode que votre <a href="depot-retrait-mobile-money.html">dépôt Mobile Money</a>. Si le délai dépasse 24 heures, vous devez contacter le support client directement depuis l'application via le Live Chat.</p>
-        </div>
+            <!-- WhatsApp Social Proof -->
+            <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+                <h3 class="font-headline-sm text-primary mb-4 flex items-center gap-2"><span class="material-symbols-outlined">support_agent</span> Aide Directe</h3>
+                <p class="text-sm text-on-surface-variant mb-6">Rejoignez notre groupe WhatsApp pour poser vos questions en direct à la communauté.</p>
+                <a href="https://chat.whatsapp.com/HrDMa2Kn2dlKrAqDNP3X56?mode=gi_t" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-[#25d366] text-white py-3 rounded-lg font-bold hover:bg-[#1db954] transition-all">
+                    Aide WhatsApp 24h/7
+                </a>
+            </div>
+        </aside>
+    </div>
+</main>
 
-        <div class="card" style="margin-bottom: 1.5rem;">
-            <h3>4. Qu'est ce qu'un pari combiné par rapport à un pari simple ?</h3>
-            <p>Un pari simple se base sur un seul événement, tandis qu'un pari combiné relie plusieurs événements pour multiplier les cotes. Attention, pour gagner un combiné, tous les événements doivent être corrects. Pour plus d'astuces sur les types de paris, consultez notre <a href="blog.html">blog d'astuces pour débutants</a>.</p>
+<footer class="bg-surface-container-highest w-full py-section-padding-mobile md:py-section-padding-desktop border-t border-outline-variant mt-auto">
+    <div class="w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-gutter">
+        <div class="text-center md:text-left">
+            <span class="font-headline-sm text-headline-sm font-black text-primary block mb-2">Guide1xBet</span>
+            <p class="font-label-caps text-label-caps text-on-surface-variant">© 2026 Guide Éducatif. Information rigoureuse pour parieurs responsables.</p>
         </div>
+        <nav class="flex flex-wrap justify-center gap-6 font-label-caps text-label-caps">
+            <a class="text-on-surface-variant hover:text-secondary transition-colors" href="index.html">Accueil</a>
+            <a class="text-on-surface-variant hover:text-secondary transition-colors" href="guide-1xbet-mb25t.html">Code MB25T</a>
+            <a class="text-on-surface-variant hover:text-secondary transition-colors" href="comment-creer-compte.html">Inscription</a>
+        </nav>
+    </div>
+</footer>
 
-        <div class="promo-box">
-            <h3>Toujours besoin d'aide ?</h3>
-            <p>Si vous avez d'autres questions sur l'utilisation de base de la plateforme ou sur la saisie du code <strong>MB25T</strong>, n'hésitez pas à nous écrire.</p>
-            <a href="contact.html" class="btn-cta">Consulter la page contact</a>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Guide Éducatif. Ce site est informatif et non affilié officiellement.</p>
-        <div class="footer-links">
-            <a href="index.html">Accueil</a>
-            <a href="guide-1xbet-mb25t.html">Le Guide du Code MB25T</a>
-            <a href="comment-creer-compte.html">Inscription</a>
-        </div>
-    </footer>
+<script>
+    // Reading Progress Bar Logic
+    window.onscroll = function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById("progress-bar").style.width = scrolled + "%";
+    };
+</script>
 </body>
 </html>

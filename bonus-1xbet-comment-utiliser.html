@@ -3,86 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Sécurité et Performance -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://reffpa.com; connect-src 'self';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    
-    <!-- SEO : Optimisé pour "Bonus 1xBet comment utiliser" -->
     <title>Bonus 1xBet : Guide complet pour le transformer en argent réel (2026)</title>
-    <meta name="description" content="Apprenez les secrets pour débloquer votre bonus 1xBet. Conditions de mise, cotes minimales et astuces pour transformer vos bonus en cash retirable.">
+    <meta name="description" content="Apprenez les secrets pour débloquer votre bonus 1xBet. Conditions de mise, cotes minimales et astuces.">
     
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">Guide<span>1xBet</span></a>
-            <ul class="nav-links">
-                <li><a href="guide-1xbet-mb25t.html">Guide VIP</a></li>
-                <li><a href="comment-creer-compte.html">Inscription</a></li>
-                <li><a href="depot-retrait-mobile-money.html">Dépôts/Retraits</a></li>
-                <li><a href="blog.html">Blog</a></li>
-            </ul>
+<body class="bg-surface text-on-surface font-body-md antialiased flex flex-col min-h-screen">
+
+<header class="glass sticky top-0 z-50 border-b border-outline">
+    <div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter h-20 max-w-container-max mx-auto">
+        <div class="flex items-center gap-10">
+            <a class="font-headline-md text-3xl font-black text-gradient-primary tracking-tighter" href="index.html">Guide<span class="text-secondary">1xBet</span></a>
+            <nav class="hidden lg:flex items-center gap-8">
+                <a class="nav-link" href="index.html">Accueil</a>
+                <a class="nav-link active" href="guide-1xbet-mb25t.html">Guide VIP</a>
+                <a class="nav-link" href="comment-creer-compte.html">Inscription</a>
+                <a class="nav-link" href="depot-retrait-mobile-money.html">Transactions</a>
+                <a class="nav-link" href="faq-1xbet.html">FAQ</a>
+                <a class="nav-link" href="blog.html">Blog</a>
+            </nav>
         </div>
-    </header>
-
-    <main>
-        <h1>Bonus 1xBet : Comment l'utiliser et le transformer en cash ?</h1>
-        
-        <p>Le bonus de bienvenue de 1xBet est l'un des plus généreux au monde, pouvant atteindre 200% de votre premier dépôt avec le code promo <strong>MB25T</strong>. Cependant, cet argent n'est pas retirable immédiatement. Il se trouve dans un "compte bonus" et vous devez remplir certaines conditions pour le transférer vers votre compte principal.</p>
-
-        <h2>Les règles d'or du bonus 1xBet</h2>
-        <p>Pour débloquer votre bonus, vous devez généralement respecter la règle du <strong>5x</strong> sur les paris combinés. Voici ce que cela signifie concrètement :</p>
-        <ul>
-            <li><strong>Mise totale :</strong> Vous devez parier 5 fois le montant du bonus reçu.</li>
-            <li><strong>Type de pari :</strong> Uniquement des paris combinés (accumulateurs).</li>
-            <li><strong>Nombre d'événements :</strong> Chaque pari combiné doit contenir au moins 3 événements.</li>
-            <li><strong>Cote minimale :</strong> Au moins 3 événements dans votre combiné doivent avoir une cote de <strong>1.40</strong> ou plus.</li>
-        </ul>
-        
-        <div class="promo-box">
-            <h3>Secret d'expert</h3>
-            <p>Ne soyez pas trop gourmand ! Choisissez des cotes proches de 1.40 pour maximiser vos chances de valider les conditions du bonus. Mieux vaut gagner petit et sûrement que de tout perdre sur une grosse cote risquée.</p>
+        <div class="flex items-center gap-4">
+            <button class="btn-premium btn-primary">S'inscrire</button>
         </div>
+    </div>
+    <div id="progress-bar" class="h-1 bg-gradient-to-r from-primary to-secondary w-0 transition-all duration-150"></div>
+</header>
 
-        <h2>Exemple concret de déblocage</h2>
-        <p>Si vous déposez 10 000 FCFA, vous recevez 10 000 FCFA de bonus (20 000 FCFA au total avec le code MB25T). Pour retirer ces 10 000 FCFA de bonus :</p>
-        <ol>
-            <li>Vous devez placer des paris combinés pour un total de 50 000 FCFA (5 x 10 000).</li>
-            <li>Chaque coupon doit avoir 3 matchs minimum avec des cotes de 1.40+.</li>
-            <li>Une fois que vous avez misé ce total, le montant du bonus restant est automatiquement transféré sur votre solde réel.</li>
-        </ol>
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-padding-mobile md:py-section-padding-desktop">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+        <article class="lg:col-span-8 premium-card p-8 md:p-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-3xl rounded-full -mr-32 -mt-32"></div>
+            <h1 class="text-gradient font-headline-lg mb-8">Bonus 1xBet : Guide de transformation</h1>
+            
+            <div class="prose prose-invert max-w-none text-on-surface-variant">
+                <p class="text-lg leading-relaxed mb-8">Le bonus de bienvenue est l'un des plus généreux. Avec le code <strong>MB25T</strong>, vous pouvez doubler votre premier dépôt jusqu'à 200%.</p>
 
-        <h2>Les erreurs qui annulent votre bonus</h2>
-        <p>Faites attention à ne pas commettre ces erreurs classiques :</p>
-        <ul>
-            <li><strong>Le délai :</strong> Vous avez généralement 30 jours pour remplir les conditions. Après cela, le bonus expire.</li>
-            <li><strong>Le retrait anticipé :</strong> Si vous essayez de retirer votre dépôt initial avant d'avoir fini les conditions du bonus, celui-ci peut être annulé.</li>
-            <li><strong>Le type de compte :</strong> Assurez-vous d'avoir coché "Participer aux offres bonus" dans les paramètres de votre compte.</li>
-        </ul>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+                    <div class="premium-card bg-primary/5 p-6 border-primary/20">
+                        <h3 class="text-white font-bold mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">rule</span>
+                            Règles d'or
+                        </h3>
+                        <ul class="text-sm space-y-2">
+                            <li>• Mise totale : 5x le bonus</li>
+                            <li>• Type : Paris Combinés</li>
+                            <li>• Matchs : 3 minimum</li>
+                            <li>• Cotes : 1.40+ par match</li>
+                        </ul>
+                    </div>
+                    <div class="premium-card bg-secondary/5 p-6 border-secondary/20">
+                        <h3 class="text-white font-bold mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary">verified</span>
+                            Exemple concret
+                        </h3>
+                        <p class="text-xs">Pour 10 000 FCFA de bonus, pariez 50 000 FCFA en coupons de 3 matchs (cotes 1.40) pour débloquer l'argent réel.</p>
+                    </div>
+                </div>
 
-        <div style="margin-top: 2rem; text-align: center; background: #f3f4f6; padding: 2rem; border-radius: 12px;">
-            <h3>Prêt à doubler votre premier dépôt ?</h3>
-            <p>Utilisez le code promo ci-dessous lors de votre inscription pour activer l'offre maximale.</p>
-            <span class="promo-code" style="font-size: 2rem; letter-spacing: 5px;">MB25T</span>
-            <br><br>
-            <a href="comment-creer-compte.html" class="btn-cta" style="display: inline-block; padding: 0.8rem 1.5rem; background-color: #1a56db; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">S'inscrire et recevoir le bonus</a>
+                <div class="bg-gradient-to-br from-primary to-primary-dark p-12 rounded-3xl text-center mb-16 shadow-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mt-32 group-hover:scale-110 transition-transform duration-700"></div>
+                    <div class="relative z-10">
+                        <h2 class="text-white font-headline-md mb-6">Prêt à doubler votre dépôt ?</h2>
+                        <div class="bg-white/10 backdrop-blur-md text-white font-black text-6xl py-8 rounded-3xl mb-6 tracking-[0.2em] border border-white/20 animate-pulse-glow">MB25T</div>
+                        <a href="comment-creer-compte.html" class="btn-premium btn-secondary mt-8">
+                            S'inscrire et profiter
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <aside class="lg:col-span-4 space-y-8">
+            <div class="premium-card border-outline/50 p-6">
+                <h3 class="font-headline-sm text-primary mb-4 flex items-center gap-2"><span class="material-symbols-outlined">warning</span> Attention</h3>
+                <p class="text-sm text-on-surface-variant">Vous avez 30 jours pour remplir les conditions. Ne tentez pas de retrait avant d'avoir fini le déblocage.</p>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer class="bg-surface-container-highest w-full py-12 border-t border-outline mt-auto">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-center md:text-left">
+            <span class="font-headline-sm text-primary font-black block mb-2">Guide1xBet</span>
+            <p class="text-xs text-on-surface-variant opacity-60">© 2026 Guide Éducatif.</p>
         </div>
+        <nav class="flex gap-6 text-xs font-bold uppercase tracking-widest">
+            <a href="index.html" class="hover:text-secondary transition-colors">Accueil</a>
+            <a href="blog.html" class="hover:text-secondary transition-colors">Blog</a>
+            <a href="contact.html" class="hover:text-secondary transition-colors">Contact</a>
+        </nav>
+    </div>
+</footer>
 
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Guide Éducatif. Ce site est informatif et non affilié officiellement.</p>
-        <div class="footer-links">
-            <a href="index.html">Accueil</a>
-            <a href="blog.html">Notre Blog</a>
-            <a href="guide-1xbet-mb25t.html">Guide MB25T</a>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="chart.js"></script>
+<script>
+    window.onscroll = function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById("progress-bar").style.width = scrolled + "%";
+    };
+</script>
 </body>
 </html>

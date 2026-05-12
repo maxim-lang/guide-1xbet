@@ -3,143 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://reffpa.com; connect-src 'self';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Conseils et astuces 1xBet : paris sportifs, bonus et stratégies débutants</title>
     <meta name="description" content="Découvrez des guides simples sur 1xBet : comprendre les cotes, éviter les erreurs, utiliser les bonus et améliorer vos paris sportifs.">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">Guide<span>1xBet</span></a>
-            <ul class="nav-links">
-                <li><a href="guide-1xbet-mb25t.html">Guide VIP</a></li>
-                <li><a href="comment-creer-compte.html">Inscription</a></li>
-                <li><a href="depot-retrait-mobile-money.html">Dépôts/Retraits</a></li>
-                <li><a href="blog.html" style="color: #1a56db;">Blog</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <main>
-        <h1>Conseils et guides pour réussir sur 1xBet</h1>
-        
-        <p>Parcourir notre blog est un excellent moyen de s'informer avant de commencer. Nos articles vous aident à comprendre la mécanique de la plateforme et les meilleures pratiques. N'oubliez pas qu'avant de commencer, il vous faut un profil optimisé. <strong>Utiliser le code promo MB25T</strong> à l'inscription est l'un de ces leviers d'optimisation (voir notre <a href="guide-1xbet-mb25t.html">guide principal</a>).</p>
-
-        <div id="odds-chart" class="chart-container">
-            <h3 style="text-align: center; color: #f9fafb; margin-bottom: 1rem;">Évolution des Cotes : Équipe A vs Équipe B</h3>
-            <div id="oddsChartCanvas"></div>
-        </div>
-
-        <div class="search-container" style="margin-bottom: 2rem;">
-            <input type="text" id="searchInput" placeholder="Rechercher un article (ex: cotes, bonus, erreurs)..." style="width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid #d1d5db; font-size: 1.05rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" onkeyup="filterArticles()">
-        </div>
-
-        <div class="grid-cards" id="articlesGrid">
-            <!-- Nouvel Article : Coupe du Monde 2026 -->
-            <article class="card">
-                <h3>Coupe du Monde 2026 : Le Guide</h3>
-                <p>Quels sont les pays qualifiés ? Où se joue la finale ? Tout savoir sur le Mondial 2026 à 48 équipes aux USA, Mexique et Canada.</p>
-                <a href="coupe-du-monde-2026-pays-qualifies-guide.html" class="btn-cta" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; font-size: 0.9rem; background-color: #1a56db; color: #ffffff; text-decoration: none; border-radius: 5px;">Lire le dossier</a>
-                <span style="display: block; margin-top: 0.5rem; font-size: 0.85em; color: #6b7280;">Publié aujourd'hui</span>
-            </article>
-
-            <!-- Nouvel Article : Calendrier Bonus -->
-            <article class="card">
-                <h3>Bonus Lundi, Mercredi, Vendredi : Le Guide</h3>
-                <p>Découvrez comment profiter des bonus Lucky Friday, X2 Mercredi et Beat 1xGames chaque semaine avec le code MB25T.</p>
-                <a href="tous-les-bonus-1xbet-calendrier.html" class="btn-cta" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; font-size: 0.9rem; background-color: #1a56db; color: #ffffff; text-decoration: none; border-radius: 5px;">Voir le calendrier</a>
-                <span style="display: block; margin-top: 0.5rem; font-size: 0.85em; color: #6b7280;">Publié aujourd'hui</span>
-            </article>
-
-            <!-- Nouvel Article : Bonus -->
-            <article class="card">
-                <h3>Bonus 1xBet : Comment l'utiliser ?</h3>
-                <p>Ne perdez plus vos bonus ! Apprenez les règles exactes pour transformer votre bonus de bienvenue en argent réel retirable.</p>
-                <a href="bonus-1xbet-comment-utiliser.html" class="btn-cta" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; font-size: 0.9rem; background-color: #1a56db; color: #ffffff; text-decoration: none; border-radius: 5px;">Débloquer mon bonus</a>
-                <span style="display: block; margin-top: 0.5rem; font-size: 0.85em; color: #6b7280;">Publié aujourd'hui</span>
-            </article>
-
-            <!-- Nouvel Article : Retrait -->
-            <article class="card">
-                <h3>Retrait 1xBet : Guide Orange & MTN</h3>
-                <p>Comment retirer vos gains en 15 minutes ? Découvrez les étapes et astuces pour Orange Money et MTN Mobile Money en 2026.</p>
-                <a href="retirer-argent-1xbet-orange-mtn.html" class="btn-cta" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; font-size: 0.9rem; background-color: #1a56db; color: #ffffff; text-decoration: none; border-radius: 5px;">Lire le guide</a>
-                <span style="display: block; margin-top: 0.5rem; font-size: 0.85em; color: #6b7280;">Publié aujourd'hui</span>
-            </article>
-
-            <!-- Nouvel Article : APK -->
-            <article class="card">
-                <h3>Télécharger 1xBet APK (2026)</h3>
-                <p>Guide complet pour installer l'application officielle sur Android et iOS en Afrique. Ne manquez plus aucun pari !</p>
-                <a href="telecharger-1xbet-apk-afrique.html" class="btn-cta" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; font-size: 0.9rem; background-color: #1a56db; color: #ffffff; text-decoration: none; border-radius: 5px;">Télécharger l'APK</a>
-                <span style="display: block; margin-top: 0.5rem; font-size: 0.85em; color: #6b7280;">Publié aujourd'hui</span>
-            </article>
-
-            <!-- Article 1 -->
-            <article class="card">
-                <h3>Comprendre le système de Cotes</h3>
-                <p>Les cotes vous indiquent la probabilité d'un évènement ainsi que votre gain potentiel. Une cote de 2.0 signifie que vous doublez votre mise en cas de succès...</p>
-                <a href="guide-1xbet-mb25t.html" class="btn-cta" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; font-size: 0.9rem; background-color: #1a56db; color: #ffffff; text-decoration: none; border-radius: 5px;">Lire l'article</a>
-                <span style="display: block; margin-top: 0.5rem; font-size: 0.85em; color: #6b7280;">Publié il y a 2 jours</span>
-            </article>
-
-            <!-- Article 2 -->
-            <article class="card">
-                <h3>Paris Simples vs Paris Combinés</h3>
-                <p>Un dilemme courant pour le débutant. Le pari simple est plus sûr car il ne dépend que d'un résultat. Le pari combiné peut rapporter gros mais est très risqué.</p>
-                <a href="guide-1xbet-mb25t.html" class="btn-cta" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; font-size: 0.9rem; background-color: #1a56db; color: #ffffff; text-decoration: none; border-radius: 5px;">En savoir plus</a>
-                <span style="display: block; margin-top: 0.5rem; font-size: 0.85em; color: #6b7280;">Publié il y a 5 jours</span>
-            </article>
-
-            <!-- Article 3 -->
-            <article class="card">
-                <h3>Les Erreurs à Éviter (Débutants)</h3>
-                <p>Parier sans s'informer, essayer de se refaire immédiatement après une perte, ou encore ignorer les conditions de mise : voici les erreurs classiques à éviter absolument !</p>
-                <a href="faq-1xbet.html" class="btn-cta" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; font-size: 0.9rem; background-color: #1a56db; color: #ffffff; text-decoration: none; border-radius: 5px;">Découvrir</a>
-                <span style="display: block; margin-top: 0.5rem; font-size: 0.85em; color: #6b7280;">Publié la semaine dernière</span>
-            </article>
-
-            <!-- Article 4 -->
-            <article class="card">
-                <h3>Comment maximiser son Bonus 1xBet ?</h3>
-                <p>Avoir un bonus c'est bien, savoir l'utiliser c'est mieux. Il y a des conditions de remises en jeu spécifiques à valider avant de pouvoir encaisser un bonus en cash.</p>
-                <a href="guide-1xbet-mb25t.html" class="btn-cta" style="display: inline-block; margin-top: 1rem; padding: 0.6rem 1.2rem; font-size: 0.9rem; background-color: #1a56db; color: #ffffff; text-decoration: none; border-radius: 5px;">Voir les astuces</a>
-                <span style="display: block; margin-top: 0.5rem; font-size: 0.85em; color: #6b7280;">Publié y a deux semaines</span>
-            </article>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Guide Éducatif. Ce site est informatif et non affilié officiellement.</p>
-        <div class="footer-links">
-            <a href="index.html">Accueil</a>
-            <a href="contact.html">Contact</a>
-            <a href="faq-1xbet.html">FAQ</a>
-        </div>
-    </footer>
-    <script>
-        function filterArticles() {
-            const input = document.getElementById('searchInput');
-            const filter = input.value.toLowerCase();
-            const cards = document.querySelectorAll('#articlesGrid .card');
-
-            cards.forEach(card => {
-                const title = card.querySelector('h3').innerText.toLowerCase();
-                const content = card.querySelector('p').innerText.toLowerCase();
-                
-                if (title.includes(filter) || content.includes(filter)) {
-                    card.style.display = "";
-                } else {
-                    card.style.display = "none";
-                }
-            });
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#0047FF",
+                      "primary-dark": "#0037C7",
+                      "secondary": "#00E676",
+                      "secondary-dark": "#00C853",
+                      "background": "#F8FAFC",
+                      "surface": "#FFFFFF",
+                      "surface-variant": "#F1F5F9",
+                      "on-surface": "#0F172A",
+                      "on-surface-variant": "#475569",
+                      "outline": "#E2E8F0",
+                      "outline-variant": "#CBD5E1",
+                      "error": "#EF4444"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.5rem",
+                      "lg": "0.75rem",
+                      "xl": "1rem",
+                      "2xl": "1.5rem",
+                      "3xl": "2rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-padding-mobile": "48px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "container-max": "1140px",
+                      "section-padding-desktop": "80px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Manrope"],
+                      "body-lg": ["Inter"],
+                      "headline-sm": ["Manrope"],
+                      "body-md": ["Inter"],
+                      "headline-md": ["Manrope"],
+                      "headline-lg": ["Manrope"],
+                      "label-caps": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-lg": ["18px", {"lineHeight": "32px", "fontWeight": "400"}],
+                      "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                      "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "800"}],
+                      "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}]
+              }
+            }
+          }
         }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="chart.js"></script>
+    <style>
+        .chart-container {
+            width: 100%;
+            height: auto;
+            min-height: 400px;
+            background-color: #111827;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+        }
+        #oddsChartCanvas { width: 100%; flex: 1; min-height: 280px; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased flex flex-col min-h-screen">
+
+<header class="glass sticky top-0 z-50 border-b border-outline">
+    <div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter h-20 max-w-container-max mx-auto">
+        <div class="flex items-center gap-10">
+            <a class="font-headline-md text-3xl font-black text-gradient-primary tracking-tighter" href="index.html">Guide<span class="text-secondary">1xBet</span></a>
+            <nav class="hidden lg:flex items-center gap-8">
+                <a class="nav-link" href="index.html">Accueil</a>
+                <a class="nav-link" href="guide-1xbet-mb25t.html">Guide VIP</a>
+                <a class="nav-link" href="comment-creer-compte.html">Inscription</a>
+                <a class="nav-link" href="depot-retrait-mobile-money.html">Transactions</a>
+                <a class="nav-link" href="faq-1xbet.html">FAQ</a>
+                <a class="nav-link text-white active" href="blog.html">Blog</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="btn-premium btn-primary">S'inscrire</button>
+        </div>
+    </div>
+</header>
+
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-padding-mobile md:py-section-padding-desktop">
+    
+    <div class="mb-12 relative">
+        <div class="absolute -top-12 -left-12 w-64 h-64 bg-primary/10 blur-3xl rounded-full"></div>
+        <h1 class="text-gradient font-headline-lg mb-6">Conseils et guides pour réussir sur 1xBet</h1>
+        <p class="text-lg text-on-surface-variant">Parcourir notre blog est un excellent moyen de s'informer avant de commencer. Nos articles vous aident à comprendre la mécanique de la plateforme.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+        
+        <!-- Articles Feed (8 cols) -->
+        <div class="lg:col-span-8 space-y-8">
+            
+            <div id="odds-chart" class="premium-card bg-[#111827] mb-12 h-[450px]">
+                <h3 class="text-center text-white mb-6">Évolution des Cotes : Analyse en Temps Réel</h3>
+                <div id="oddsChartCanvas"></div>
+            </div>
+
+            <div class="relative group">
+                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+                <input type="text" id="searchInput" placeholder="Rechercher un article (ex: cotes, bonus, erreurs)..." class="w-full bg-surface-container-low border border-outline-variant rounded-xl pl-12 pr-4 py-4 focus:ring-2 focus:ring-secondary outline-none transition-all font-body-md text-body-md" onkeyup="filterArticles()">
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="articlesGrid">
+                <!-- Article Card 1 -->
+                <article class="card premium-card group flex flex-col justify-between">
+                    <div class="relative z-10">
+                        <span class="inline-block bg-primary/10 text-primary font-bold text-[11px] px-3 py-1 rounded-full mb-6 uppercase tracking-wider">Coupe du Monde</span>
+                        <h3 class="font-headline-sm text-white mb-4 group-hover:text-primary transition-colors">Coupe du Monde 2026 : Le Guide</h3>
+                        <p class="text-on-surface-variant mb-6 leading-relaxed">Tout savoir sur le Mondial 2026 à 48 équipes.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-auto pt-6 border-t border-outline relative z-10">
+                        <span class="text-xs text-on-surface-variant opacity-60 font-medium">Aujourd'hui</span>
+                        <a href="coupe-du-monde-2026-pays-qualifies-guide.html" class="text-primary font-bold text-sm flex items-center group/link">Lire le dossier <span class="material-symbols-outlined text-[16px] ml-1 transform group-hover/link:translate-x-1 transition-transform">chevron_right</span></a>
+                    </div>
+                </article>
+
+                <!-- Article Card 2 -->
+                <article class="card premium-card group flex flex-col justify-between">
+                    <div class="relative z-10">
+                        <span class="inline-block bg-secondary/10 text-secondary font-bold text-[11px] px-3 py-1 rounded-full mb-6 uppercase tracking-wider">Promo</span>
+                        <h3 class="font-headline-sm text-white mb-4 group-hover:text-secondary transition-colors">Bonus Hebdo : Le Calendrier</h3>
+                        <p class="text-on-surface-variant mb-6 leading-relaxed">Profitez des bonus Lucky Friday et X2 Mercredi.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-auto pt-6 border-t border-outline relative z-10">
+                        <span class="text-xs text-on-surface-variant opacity-60 font-medium">Aujourd'hui</span>
+                        <a href="tous-les-bonus-1xbet-calendrier.html" class="text-secondary font-bold text-sm flex items-center group/link">Voir le guide <span class="material-symbols-outlined text-[16px] ml-1 transform group-hover/link:translate-x-1 transition-transform">chevron_right</span></a>
+                    </div>
+                </article>
+
+                <!-- Article Card 3 -->
+                <article class="card premium-card group flex flex-col justify-between">
+                    <div class="relative z-10">
+                        <span class="inline-block bg-primary/10 text-primary font-bold text-[11px] px-3 py-1 rounded-full mb-6 uppercase tracking-wider">Bonus</span>
+                        <h3 class="font-headline-sm text-white mb-4 group-hover:text-primary transition-colors">Bonus 1xBet : Comment l'utiliser ?</h3>
+                        <p class="text-on-surface-variant mb-6 leading-relaxed">Règles exactes pour transformer votre bonus en argent réel.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-auto pt-6 border-t border-outline relative z-10">
+                        <span class="text-xs text-on-surface-variant opacity-60 font-medium">Aujourd'hui</span>
+                        <a href="bonus-1xbet-comment-utiliser.html" class="text-primary font-bold text-sm flex items-center group/link">Débloquer <span class="material-symbols-outlined text-[16px] ml-1 transform group-hover/link:translate-x-1 transition-transform">chevron_right</span></a>
+                    </div>
+                </article>
+
+                <!-- Article Card 4 -->
+                <article class="card premium-card group flex flex-col justify-between">
+                    <div class="relative z-10">
+                        <span class="inline-block bg-secondary/10 text-secondary font-bold text-[11px] px-3 py-1 rounded-full mb-6 uppercase tracking-wider">Retrait</span>
+                        <h3 class="font-headline-sm text-white mb-4 group-hover:text-secondary transition-colors">Retrait : Guide Orange & MTN</h3>
+                        <p class="text-on-surface-variant mb-6 leading-relaxed">Comment retirer vos gains en 15 minutes localement.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-auto pt-6 border-t border-outline relative z-10">
+                        <span class="text-xs text-on-surface-variant opacity-60 font-medium">Aujourd'hui</span>
+                        <a href="retirer-argent-1xbet-orange-mtn.html" class="text-secondary font-bold text-sm flex items-center group/link">Lire le guide <span class="material-symbols-outlined text-[16px] ml-1 transform group-hover/link:translate-x-1 transition-transform">chevron_right</span></a>
+                    </div>
+                </article>
+
+                <!-- Article Card 5 -->
+                <article class="card premium-card group flex flex-col justify-between">
+                    <div class="relative z-10">
+                        <span class="inline-block bg-primary/10 text-primary font-bold text-[11px] px-3 py-1 rounded-full mb-6 uppercase tracking-wider">App</span>
+                        <h3 class="font-headline-sm text-white mb-4 group-hover:text-primary transition-colors">Télécharger 1xBet APK (2026)</h3>
+                        <p class="text-on-surface-variant mb-6 leading-relaxed">Guide complet pour installer l'app officielle sur Android et iOS.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-auto pt-6 border-t border-outline relative z-10">
+                        <span class="text-xs text-on-surface-variant opacity-60 font-medium">Aujourd'hui</span>
+                        <a href="telecharger-1xbet-apk-afrique.html" class="text-primary font-bold text-sm flex items-center group/link">Installer <span class="material-symbols-outlined text-[16px] ml-1 transform group-hover/link:translate-x-1 transition-transform">chevron_right</span></a>
+                    </div>
+                </article>
+
+                <!-- Article Card 6 -->
+                <article class="card premium-card group flex flex-col justify-between">
+                    <div class="relative z-10">
+                        <span class="inline-block bg-secondary/10 text-secondary font-bold text-[11px] px-3 py-1 rounded-full mb-6 uppercase tracking-wider">Stratégie</span>
+                        <h3 class="font-headline-sm text-white mb-4 group-hover:text-secondary transition-colors">Système de Cotes</h3>
+                        <p class="text-on-surface-variant mb-6 leading-relaxed">Comprenez comment les cotes déterminent vos gains.</p>
+                    </div>
+                    <div class="flex items-center justify-between mt-auto pt-6 border-t border-outline relative z-10">
+                        <span class="text-xs text-on-surface-variant opacity-60 font-medium">2 jours</span>
+                        <a href="guide-1xbet-mb25t.html" class="text-secondary font-bold text-sm flex items-center group/link">En savoir plus <span class="material-symbols-outlined text-[16px] ml-1 transform group-hover/link:translate-x-1 transition-transform">chevron_right</span></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Sidebar (4 cols) -->
+        <aside class="lg:col-span-4 space-y-8">
+            
+            <!-- Promo Box MB25T -->
+            <div class="bg-surface-container border-2 border-dashed border-secondary rounded-xl p-6 text-center">
+                <h3 class="font-headline-sm text-primary mb-2">Avantage Exclusif</h3>
+                <p class="text-on-surface-variant text-sm mb-4">Utilisez le code promo lors de votre inscription pour activer vos bonus :</p>
+                <div class="bg-primary text-white font-bold text-2xl py-3 rounded-lg mb-4 tracking-widest">MB25T</div>
+                <a href="guide-1xbet-mb25t.html" class="text-secondary font-label-caps hover:underline font-bold">Voir comment l'utiliser →</a>
+            </div>
+
+            <!-- WhatsApp Social Proof -->
+            <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+                <h3 class="font-headline-sm text-primary mb-4 flex items-center gap-2"><span class="material-symbols-outlined">groups</span> Communauté</h3>
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="flex -space-x-3">
+                        <img src="social_proof_avatars.png" alt="User" class="w-10 h-10 rounded-full border-2 border-white shadow-sm">
+                    </div>
+                    <p class="text-sm text-on-surface-variant">Rejoignez <strong>+850 parieurs</strong> actifs !</p>
+                </div>
+                <a href="https://chat.whatsapp.com/HrDMa2Kn2dlKrAqDNP3X56?mode=gi_t" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-[#25d366] text-white py-3 rounded-lg font-bold hover:bg-[#1db954] transition-all">
+                    <span class="material-symbols-outlined text-[20px]">chat</span> Groupe WhatsApp VIP
+                </a>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer class="bg-surface-container-highest w-full py-section-padding-mobile md:py-section-padding-desktop border-t border-outline-variant mt-auto">
+    <div class="w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-gutter">
+        <div class="text-center md:text-left">
+            <span class="font-headline-sm text-headline-sm font-black text-primary block mb-2">Guide1xBet</span>
+            <p class="font-label-caps text-label-caps text-on-surface-variant">© 2026 Guide Éducatif. Information rigoureuse pour parieurs responsables.</p>
+        </div>
+        <nav class="flex flex-wrap justify-center gap-6 font-label-caps text-label-caps">
+            <a class="text-on-surface-variant hover:text-secondary transition-colors" href="index.html">Accueil</a>
+            <a class="text-on-surface-variant hover:text-secondary transition-colors" href="guide-1xbet-mb25t.html">Code MB25T</a>
+            <a class="text-on-surface-variant hover:text-secondary transition-colors" href="contact.html">Contact</a>
+        </nav>
+    </div>
+    <div class="w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter mt-8 pt-8 border-t border-outline-variant">
+        <p class="font-label-caps text-label-caps text-on-surface-variant text-center max-w-3xl mx-auto opacity-70">
+            Avertissement : Ce site est une plateforme éducative. Nous ne sommes pas un site de paris. Les paris sportifs comportent des risques. Jouez de manière responsable.
+        </p>
+    </div>
+</footer>
+
+<script>
+    function filterArticles() {
+        const input = document.getElementById('searchInput');
+        const filter = input.value.toLowerCase();
+        const cards = document.querySelectorAll('#articlesGrid .card');
+
+        cards.forEach(card => {
+            const title = card.querySelector('h3').innerText.toLowerCase();
+            const content = card.querySelector('p').innerText.toLowerCase();
+            
+            if (title.includes(filter) || content.includes(filter)) {
+                card.style.display = "";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="chart.js"></script>
 </body>
 </html>

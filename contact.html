@@ -3,71 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://reffpa.com; connect-src 'self';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Contact support 1xBet : assistance et aide pour débutants</title>
-    <meta name="description" content="Contactez-nous pour toute question sur 1xBet, inscription, bonus ou problème de retrait. Support simple pour débutants.">
+    <meta name="description" content="Contactez-nous pour toute question sur 1xBet, inscription, bonus ou retrait.">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">Guide<span>1xBet</span></a>
-            <ul class="nav-links">
-                <li><a href="guide-1xbet-mb25t.html">Guide VIP</a></li>
-                <li><a href="comment-creer-compte.html">Inscription</a></li>
-                <li><a href="faq-1xbet.html">FAQ</a></li>
-                <li><a href="contact.html" style="color: #1a56db;">Contact</a></li>
-            </ul>
+<body class="bg-surface text-on-surface font-body-md antialiased flex flex-col min-h-screen">
+
+<header class="glass sticky top-0 z-50 border-b border-outline">
+    <div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter h-20 max-w-container-max mx-auto">
+        <div class="flex items-center gap-10">
+            <a class="font-headline-md text-3xl font-black text-gradient-primary tracking-tighter" href="index.html">Guide<span class="text-secondary">1xBet</span></a>
+            <nav class="hidden lg:flex items-center gap-8">
+                <a class="nav-link" href="index.html">Accueil</a>
+                <a class="nav-link" href="guide-1xbet-mb25t.html">Guide VIP</a>
+                <a class="nav-link" href="comment-creer-compte.html">Inscription</a>
+                <a class="nav-link" href="depot-retrait-mobile-money.html">Transactions</a>
+                <a class="nav-link" href="faq-1xbet.html">FAQ</a>
+                <a class="nav-link active" href="contact.html">Contact</a>
+            </nav>
         </div>
-    </header>
-
-    <main>
-        <h1>Contact et assistance 1xBet</h1>
-        
-        <p>Notre équipe est là pour vous assister si vous avez des questions concernant les informations présentes sur ce site éducatif. Si vos problèmes concernent directement votre application (perte de mot de passe, etc.), nous vous invitons à contacter directement le service client officiel de l'opérateur.</p>
-
-        <p>Cependant, si vous souhaitez des précisions sur la manière d'<strong>utiliser le code promo MB25T</strong> ou si vous avez des difficultés à comprendre notre <a href="guide-1xbet-mb25t.html">guide principal du code</a>, vous êtes au bon endroit !</p>
-
-        <form class="contact-form" action="#" method="get" onsubmit="alert('Message envoyé avec succès. Nous vous répondrons sous 24h.'); return false;">
-            <div class="form-group">
-                <label for="name">Votre Nom</label>
-                <input type="text" id="name" name="name" required placeholder="Ex: Jean Dupont">
-            </div>
-            
-            <div class="form-group">
-                <label for="email">Votre Adresse Email</label>
-                <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com">
-            </div>
-            
-            <div class="form-group">
-                <label for="subject">Sujet</label>
-                <input type="text" id="subject" name="subject" required placeholder="Ex: Problème retrait ou Infos sur le bonus 1xBet">
-            </div>
-            
-            <div class="form-group">
-                <label for="message">Votre Message</label>
-                <textarea id="message" name="message" rows="5" required placeholder="Expliquez-nous comment nous pouvons vous aider..."></textarea>
-            </div>
-            
-            <button type="submit" class="btn-cta" style="width: 100%;">Envoyer le message</button>
-        </form>
-
-        <div style="margin-top: 2rem;">
-            <h3>Autres ressources utiles</h3>
-            <p>Avant de nous écrire, avez-vous vérifié si la solution ne se trouve pas dans notre <a href="faq-1xbet.html">Foire Aux Questions</a> ou dans notre section tutoriel expliquant <a href="comment-creer-compte.html">comment créer un compte</a> ?</p>
+        <div class="flex items-center gap-4">
+            <button class="btn-premium btn-primary">S'inscrire</button>
         </div>
-    </main>
+    </div>
+</header>
 
-    <footer>
-        <p>&copy; 2026 Guide Éducatif. Ce site est informatif et non affilié officiellement.</p>
-        <div class="footer-links">
-            <a href="index.html">Accueil</a>
-            <a href="blog.html">Blog & Astuces</a>
-            <a href="guide-1xbet-mb25t.html">Bonus MB25T</a>
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-padding-mobile md:py-section-padding-desktop">
+    <div class="max-w-2xl mx-auto">
+        <div class="text-center mb-12">
+            <h1 class="text-gradient font-headline-lg mb-6">Contact & Assistance</h1>
+            <p class="text-on-surface-variant">Une question sur le code <strong>MB25T</strong> ou nos guides ? Notre équipe vous répond sous 24h.</p>
         </div>
-    </footer>
+
+        <div class="premium-card p-8 md:p-12 relative overflow-hidden">
+            <div class="absolute -bottom-12 -right-12 w-64 h-64 bg-primary/10 blur-3xl rounded-full"></div>
+            
+            <form class="space-y-6 relative z-10" onsubmit="alert('Message envoyé avec succès. Nous vous répondrons sous 24h.'); return false;">
+                <div>
+                    <label class="block text-sm font-bold text-white mb-2">Votre Nom</label>
+                    <input type="text" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary outline-none transition-all" placeholder="Jean Dupont">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-white mb-2">Votre Email</label>
+                    <input type="email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary outline-none transition-all" placeholder="jean@exemple.com">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-white mb-2">Votre Message</label>
+                    <textarea rows="5" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-primary outline-none transition-all" placeholder="Comment pouvons-nous vous aider ?"></textarea>
+                </div>
+                <button type="submit" class="btn-premium btn-primary w-full py-4 text-lg">
+                    Envoyer le message
+                </button>
+            </form>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <a href="faq-1xbet.html" class="premium-card p-6 flex items-center gap-4 hover:border-primary/50 transition-all">
+                <span class="material-symbols-outlined text-primary">help</span>
+                <div>
+                    <h4 class="text-white font-bold">Consulter la FAQ</h4>
+                    <p class="text-xs text-on-surface-variant">Réponses rapides</p>
+                </div>
+            </a>
+            <a href="https://chat.whatsapp.com/HrDMa2Kn2dlKrAqDNP3X56?mode=gi_t" target="_blank" class="premium-card p-6 flex items-center gap-4 hover:border-secondary/50 transition-all">
+                <span class="material-symbols-outlined text-secondary">chat</span>
+                <div>
+                    <h4 class="text-white font-bold">Aide WhatsApp</h4>
+                    <p class="text-xs text-on-surface-variant">Communauté active</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-surface-container-highest w-full py-12 border-t border-outline mt-auto">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter text-center">
+        <p class="text-xs text-on-surface-variant opacity-60">© 2026 Guide Éducatif. Information rigoureuse.</p>
+    </div>
+</footer>
 </body>
 </html>

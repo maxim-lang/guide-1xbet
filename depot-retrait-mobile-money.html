@@ -3,70 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.tailwindcss.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://reffpa.com; connect-src 'self';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Dépôt et retrait 1xBet avec Mobile Money (MTN, Orange Money Afrique)</title>
     <meta name="description" content="Apprenez comment déposer et retirer de l’argent sur 1xBet avec Mobile Money en Afrique : MTN, Orange Money et délais de paiement.">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary": "#0047FF",
+                      "primary-dark": "#0037C7",
+                      "secondary": "#00E676",
+                      "secondary-dark": "#00C853",
+                      "background": "#F8FAFC",
+                      "surface": "#FFFFFF",
+                      "surface-variant": "#F1F5F9",
+                      "on-surface": "#0F172A",
+                      "on-surface-variant": "#475569",
+                      "outline": "#E2E8F0",
+                      "outline-variant": "#CBD5E1",
+                      "error": "#EF4444"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.5rem",
+                      "lg": "0.75rem",
+                      "xl": "1rem",
+                      "2xl": "1.5rem",
+                      "3xl": "2rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-padding-mobile": "48px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "container-max": "1140px",
+                      "section-padding-desktop": "80px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Manrope"],
+                      "body-lg": ["Inter"],
+                      "headline-sm": ["Manrope"],
+                      "body-md": ["Inter"],
+                      "headline-md": ["Manrope"],
+                      "headline-lg": ["Manrope"],
+                      "label-caps": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "body-lg": ["18px", {"lineHeight": "32px", "fontWeight": "400"}],
+                      "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                      "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "800"}],
+                      "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+    <style>
+        article ul { list-style-type: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; }
+        article ol { list-style-type: decimal; margin-left: 1.5rem; margin-bottom: 1.5rem; }
+        article li { margin-bottom: 0.5rem; }
+        .payment-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            font-weight: 900;
+            font-size: 14px;
+            margin-right: 12px;
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">Guide<span>1xBet</span></a>
-            <ul class="nav-links">
-                <li><a href="guide-1xbet-mb25t.html">Guide VIP</a></li>
-                <li><a href="comment-creer-compte.html">Inscription</a></li>
-                <li><a href="depot-retrait-mobile-money.html">Dépôts/Retraits</a></li>
-                <li><a href="faq-1xbet.html">FAQ</a></li>
-            </ul>
-        </div>
-    </header>
+<body class="bg-surface text-on-surface font-body-md antialiased flex flex-col min-h-screen">
 
-    <main>
-        <h1>Dépôt et retrait sur 1xBet avec Mobile Money</h1>
+<header class="glass sticky top-0 z-50 border-b border-outline">
+    <div class="flex justify-between items-center w-full px-margin-mobile md:px-gutter h-20 max-w-container-max mx-auto">
+        <div class="flex items-center gap-10">
+            <a class="font-headline-md text-3xl font-black text-gradient-primary tracking-tighter" href="index.html">Guide<span class="text-secondary">1xBet</span></a>
+            <nav class="hidden lg:flex items-center gap-8">
+                <a class="nav-link" href="index.html">Accueil</a>
+                <a class="nav-link" href="guide-1xbet-mb25t.html">Guide VIP</a>
+                <a class="nav-link" href="comment-creer-compte.html">Inscription</a>
+                <a class="nav-link text-white active" href="depot-retrait-mobile-money.html">Transactions</a>
+                <a class="nav-link" href="faq-1xbet.html">FAQ</a>
+                <a class="nav-link" href="blog.html">Blog</a>
+            </nav>
+        </div>
+        <div class="flex items-center gap-4">
+            <button class="btn-premium btn-primary">S'inscrire</button>
+        </div>
+    </div>
+    <div id="progress-bar" class="h-1 bg-gradient-to-r from-primary to-secondary w-0 transition-all duration-150"></div>
+</header>
+
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-padding-mobile md:py-section-padding-desktop">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
         
-        <p>L’un des grands avantages de la plateforme en Afrique francophone (Cameroun, Côte d'Ivoire, Sénégal, etc.) est la possibilité de gérer vos fonds directement avec votre téléphone portable, de manière rapide et sécurisée.</p>
+        <!-- Content (8 cols) -->
+        <article class="lg:col-span-8 premium-card p-8 md:p-12 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-3xl rounded-full -mr-32 -mt-32"></div>
+            <h1 class="text-gradient font-headline-lg mb-8">Dépôt et retrait sur 1xBet avec Mobile Money</h1>
+            
+            <div class="prose prose-invert max-w-none text-on-surface-variant">
+                <p class="text-lg leading-relaxed mb-8">L’un des grands avantages de la plateforme en Afrique francophone (Cameroun, Côte d'Ivoire, Sénégal, etc.) est la possibilité de gérer vos fonds directement avec votre téléphone portable, de manière rapide et sécurisée.</p>
 
-        <h2>Effectuer un Dépôt Mobile Money</h2>
-        <p>Pour pouvoir placer un pronostic ou activer un avantage, vous devez d'abord approvisionner votre compte.</p>
-        <ol>
-            <li>Connectez-vous à votre compte. Si vous n'en avez pas, apprenez <a href="comment-creer-compte.html">comment créer un compte</a> ici.</li>
-            <li>Allez dans la section "Faire un dépôt" (le bouton vert en haut).</li>
-            <li><span style="display:inline-block; width:24px; height:24px; background:#ff6600; color:white; border-radius:4px; text-align:center; line-height:24px; font-weight:bold; font-size:12px; margin-right:8px;">O</span> <strong>Orange Money</strong></li>
-            <li><span style="display:inline-block; width:24px; height:24px; background:#ffcc00; color:#000; border-radius:4px; text-align:center; line-height:24px; font-weight:bold; font-size:12px; margin-right:8px;">M</span> <strong>MTN Mobile Money</strong></li>
-            <li><strong>Moov, Wave, etc.</strong></li>
-            <li>Entrez le montant souhaité et votre numéro de téléphone.</li>
-            <li>Confirmez la transaction via le code secret sur votre téléphone. L'argent apparaît quasi instantanément.</li>
-        </ol>
+                <h2 class="font-headline-md text-primary mt-12 mb-6">Effectuer un Dépôt Mobile Money</h2>
+                <p class="mb-6">Pour pouvoir placer un pronostic ou activer un avantage, vous devez d'abord approvisionner votre compte.</p>
+                
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start bg-surface-container-low p-4 rounded-xl border border-outline-variant">
+                        <span class="payment-badge bg-[#ff6600] text-white">O</span>
+                        <div>
+                            <strong class="text-on-surface">Orange Money</strong>
+                            <p class="text-sm">Disponible instantanément dans la plupart des pays d'Afrique de l'Ouest et Centrale.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start bg-surface-container-low p-4 rounded-xl border border-outline-variant">
+                        <span class="payment-badge bg-[#ffcc00] text-black">M</span>
+                        <div>
+                            <strong class="text-on-surface">MTN Mobile Money</strong>
+                            <p class="text-sm">Service fiable et ultra-rapide pour vos dépôts directs sans frais.</p>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="promo-box">
-            <h3>Rappel Bonus de Dépôt</h3>
-            <p>N'oubliez pas, pour doubler votre premier dépôt, <strong>utilisez le code promo MB25T</strong> à l'inscription. Découvrez les détails sur le <a href="guide-1xbet-mb25t.html">bonus 1xBet</a> !</p>
+                <ol class="mb-8">
+                    <li>Connectez-vous à votre compte. Si vous n'en avez pas, apprenez <a href="comment-creer-compte.html" class="text-secondary hover:underline">comment créer un compte</a> ici.</li>
+                    <li>Allez dans la section "Faire un dépôt" (le bouton vert en haut).</li>
+                    <li>Choisissez votre opérateur (Orange, MTN, Moov, Wave, etc.).</li>
+                    <li>Entrez le montant souhaité et votre numéro de téléphone.</li>
+                    <li>Confirmez la transaction via le code secret sur votre téléphone. L'argent apparaît quasi instantanément.</li>
+                </ol>
+
+                <div class="premium-card bg-primary/10 border-primary/20 p-8 mb-12 flex items-center gap-6">
+                    <div class="hidden md:flex bg-primary/20 p-4 rounded-2xl">
+                        <span class="material-symbols-outlined text-primary text-4xl">payments</span>
+                    </div>
+                    <div>
+                        <h3 class="font-headline-sm text-white mb-2">Rappel Bonus de Dépôt</h3>
+                        <p class="text-sm">N'oubliez pas, pour doubler votre premier dépôt, <strong>utilisez le code promo MB25T</strong> à l'inscription.</p>
+                        <a href="guide-1xbet-mb25t.html" class="btn-premium btn-secondary mt-4 py-2 px-6 text-sm">
+                            Voir le guide bonus
+                        </a>
+                    </div>
+                </div>
+
+                <h2 class="font-headline-md text-primary mt-12 mb-6">Comment Faire un Retrait ?</h2>
+                <p class="mb-4">Retirer ses gains est tout aussi simple, mais une règle stricte s'applique :</p>
+                <div class="bg-gradient-to-r from-primary/20 to-primary-dark/20 text-white p-8 rounded-3xl mb-8 border border-primary/30 text-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-2xl rounded-full -mr-16 -mt-16"></div>
+                    <p class="text-xl font-bold relative z-10 italic">"Vous devez utiliser la même méthode pour le retrait que celle utilisée pour le dépôt."</p>
+                </div>
+                
+                <ol class="mb-8">
+                    <li>Dans votre profil personnel, cliquez sur "Retirer des fonds".</li>
+                    <li>Sélectionnez votre méthode Mobile Money habituelle.</li>
+                    <li>Indiquez le montant de vos gains à retirer.</li>
+                    <li>Renseignez le numéro de compte / téléphone associé.</li>
+                    <li>La validation prend entre 15 minutes et 24 heures selon la congestion du réseau.</li>
+                </ol>
+
+                <h2 class="font-headline-md text-primary mt-12 mb-6">Délais et Problèmes Fréquents</h2>
+                <p class="mb-8">Dans la majorité des cas, les dépôts sont instantanés et les retraits prennent moins d'une heure. S'il y a un retard, cela peut venir d'une vérification de compte non complétée. En cas de doute, consultez notre <a href="faq-1xbet.html" class="text-secondary hover:underline">FAQ complète</a>.</p>
+            </div>
+        </article>
+
+        <!-- Sidebar (4 cols) -->
+        <aside class="lg:col-span-4 space-y-8">
+            <!-- Security Box -->
+            <div class="bg-surface-container-highest rounded-xl p-6">
+                <h3 class="font-headline-sm text-primary mb-4 flex items-center gap-2"><span class="material-symbols-outlined">shield_check</span> Sécurité Totale</h3>
+                <p class="text-sm text-on-surface-variant mb-4">Vos transactions sont protégées par un cryptage SSL de bout en bout. 1xBet ne stocke pas vos codes secrets Mobile Money.</p>
+                <div class="flex gap-2">
+                    <span class="bg-white px-2 py-1 rounded text-[10px] font-bold text-outline border border-outline-variant uppercase">SSL Secure</span>
+                    <span class="bg-white px-2 py-1 rounded text-[10px] font-bold text-outline border border-outline-variant uppercase">2FA Ready</span>
+                </div>
+            </div>
+
+            <!-- WhatsApp CTA -->
+            <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 shadow-sm">
+                <h3 class="font-headline-sm text-primary mb-4 flex items-center gap-2"><span class="material-symbols-outlined">help</span> Un blocage ?</h3>
+                <p class="text-sm text-on-surface-variant mb-6">Si votre dépôt ne s'affiche pas après 30 minutes, contactez-nous sur WhatsApp pour une assistance rapide.</p>
+                <a href="https://chat.whatsapp.com/HrDMa2Kn2dlKrAqDNP3X56?mode=gi_t" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-[#25d366] text-white py-3 rounded-lg font-bold hover:bg-[#1db954] transition-all">
+                    Aide WhatsApp 24h/7
+                </a>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer class="bg-surface-container-highest w-full py-section-padding-mobile md:py-section-padding-desktop border-t border-outline-variant mt-auto">
+    <div class="w-full px-margin-mobile md:px-gutter max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-gutter">
+        <div class="text-center md:text-left">
+            <span class="font-headline-sm text-headline-sm font-black text-primary block mb-2">Guide1xBet</span>
+            <p class="font-label-caps text-label-caps text-on-surface-variant">© 2026 Guide Éducatif. Information rigoureuse pour parieurs responsables.</p>
         </div>
+        <nav class="flex flex-wrap justify-center gap-6 font-label-caps text-label-caps">
+            <a class="text-on-surface-variant hover:text-secondary transition-colors" href="index.html">Accueil</a>
+            <a class="text-on-surface-variant hover:text-secondary transition-colors" href="guide-1xbet-mb25t.html">Code MB25T</a>
+            <a class="text-on-surface-variant hover:text-secondary transition-colors" href="contact.html">Contact</a>
+        </nav>
+    </div>
+</footer>
 
-        <h2>Comment Faire un Retrait ?</h2>
-        <p>Retirer ses gains est tout aussi simple, mais une règle stricte s'applique : <strong>vous devez utiliser la même méthode pour le retrait que celle utilisée pour le dépôt.</strong></p>
-        <ol>
-            <li>Dans votre profil personnel, cliquez sur "Retirer des fonds".</li>
-            <li>Sélectionnez votre méthode Mobile Money.</li>
-            <li>Indiquez le montant de vos gains à retirer.</li>
-            <li>Renseignez le numéro de compte / téléphone associé.</li>
-            <li>La validation prend entre 15 minutes et 24 heures selon la congestion du réseau.</li>
-        </ol>
-
-        <h2>Délais et Problèmes Fréquents</h2>
-        <p>Dans la majorité des cas, les dépôts sont instantanés et les retraits prennent moins d'une heure. S'il y a un retard de retrait, cela peut venir d'une vérification de compte non complétée. En cas de doute prolongé, nous avons compilé un guide des problèmes dans notre page <a href="faq-1xbet.html">Foire Aux Questions (FAQ)</a> où nous abordons les retards.</p>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Guide Éducatif. Ce site est informatif et non affilié officiellement.</p>
-        <div class="footer-links">
-            <a href="index.html">Accueil</a>
-            <a href="guide-1xbet-mb25t.html">Le Guide du Code MB25T</a>
-            <a href="faq-1xbet.html">FAQ</a>
-        </div>
-    </footer>
+<script>
+    // Reading Progress Bar Logic
+    window.onscroll = function() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById("progress-bar").style.width = scrolled + "%";
+    };
+</script>
 </body>
 </html>
